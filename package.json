@@ -1,0 +1,49 @@
+{
+  "name": "todo-react",
+  "version": "0.0.1",
+  "description": "Todo app built with express, and react",
+  "main": "server.js",
+  "scripts": {
+    "watch": "watchify --extension=.js --extension=.js client/app.js -o public/js/bundle.js --debug --verbose",
+    "start": "npm run watch & node --harmony server.js"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "reactify"
+      ]
+    ]
+  },
+  "dependencies": {
+    "body-parser": "^1.12.4",
+    "dotenv": "^1.1.0",
+    "express": "~4.9.x",
+    "express-handlebars": "^2.0.1",
+    "flux": "^2.0.3",
+    "keymirror": "^0.1.1",
+    "node-uuid": "^1.4.3",
+    "react": "^0.13.3",
+    "react-router": "^0.13.3",
+    "reactify": "^1.1.1",
+    "superagent": "^1.2.0"
+  },
+  "engines": {
+    "node": "0.12.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/heroku/node-js-getting-started"
+  },
+  "keywords": [
+    "node",
+    "react",
+    "flux",
+    "todo"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^10.2.3",
+    "reactify": "^1.1.1",
+    "watchify": "^3.2.1"
+  }
+}

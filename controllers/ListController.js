@@ -48,7 +48,7 @@ ListController.prototype.getListById = function (req, res) {
 
 	List.findOne(req.params.id, function (err, list) {
 		if (err) {
-			self.sendError(err, res);
+			self.sendError(ErrorCodes.UNABLE_TO_FIND_LIST, res);
 			return;
 		}
 		self.sendData(new ListResponse(list), res);

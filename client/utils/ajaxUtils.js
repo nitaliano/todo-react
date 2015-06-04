@@ -4,7 +4,6 @@ module.exports = {
 	get: function (url, data, cb) {
 		http
 			.get(url)
-			.set('Content-Type', 'application/json')
 			.set('Accept', 'application/json')
 			.query(data)
 			.end(end(cb));
@@ -22,6 +21,7 @@ module.exports = {
 	post: function (url, data, cb) {
 		http
 			.post(url)
+			.set('Content-Type', 'application/json')
 			.set('Accept', 'application/json')
 			.send(data)
 			.end(end(cb));

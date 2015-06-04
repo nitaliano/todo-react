@@ -2,7 +2,9 @@
 A simple todo app built with express, react, and bootstrap.
  
 ### Install
-```npm install```
+```
+npm install
+```
 
 ### Env file setup
 I'm using [dotenv](https://github.com/motdotla/dotenv) for my enviroment file.
@@ -14,4 +16,12 @@ PORT=80
 ```
 
 Express is looking for this config under process.env.PORT
-(I'll be adding a gulp task for this soon)
+I'll be adding a gulp task for this soon
+
+### Run
+```
+npm start
+```
+
+This will start the watch task, and the node server. You'll see more information
+in the terminal if you're curious
